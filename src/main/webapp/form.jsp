@@ -89,35 +89,25 @@
 			outline: none;
 			text-decoration: none;
 		}
-		a:hover {
-			text-decoration: underline;
-		}
 		
 		/* STYLE */
+		/* Typography */
 		body {
 			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-			color: #333;
-		}
-		h1, h2, legend {
-			font-weight: bold;
-		}
-		h1, h2 {
-			text-align:center;
-			padding: 0.25em 0;
-		}
-		h1, h2, input {
-			border: 0.1em solid;
-		}
-		h1 {
-			text-transform: uppercase;
-		}
-		a, .button {
-			color: #00f;			
 		}
 		
-		.example {
-			color:#aaa;
-		}
+		/* Colors */
+		body {color: #444;}
+		.example, .office {color:#888;}
+		h1 {background: #29f;}
+		h2, h3, legend {color: #29f;}
+		a {color:#4a5;}
+		a:hover {color:#6b6;}
+		input.button {background:#4a5;}
+		input.button:hover {background:#6b6;}
+		h1, input.button {color: #fff;}
+
+		/* Layout */
 		body {
 			padding: 0 0.75em;
 			text-align: center;
@@ -126,6 +116,23 @@
 			text-align:left;
 			margin: 0 auto;
 			max-width: 33em;
+		}
+		h1 {
+			position: fixed;
+			z-index:1000;
+			width:100%;
+			left:0;
+			top:0;
+			margin: 0;
+			padding: 0.75em 0;
+			box-shadow: 0 0.125em 0.125em rgba(0,0,0,0.25);
+		}
+		h1, input.button {
+			text-align:center;	
+		}
+		h2 {
+			padding-top: 3.5em;
+			padding-bottom: 0.5em;
 		}
 		ol {
 			padding-left:1.5em;
@@ -143,8 +150,12 @@
 		}
 		input.button {
 			cursor:pointer;
+			-webkit-appearance:none;
 			padding: 0.25em 1em;
 			width: 100%;
+		}
+		ol span {
+			display:block;
 		}
 		@media screen and (max-width: 49.5em) {
 			label {display:block;}
@@ -164,27 +175,27 @@
 	<div id="page">
 	<h1>Loternik Wyborczy</h1>
 	<h2>Wybory Samorządowe 2014</h2>
-	<form action="results">
+	<form method="post" action="results">
 		<fieldset>
 			<legend>Wybierz, kogo chcesz losować:</legend>
 			<p>
-				Wyszukaj swój obwód wyborczy na stronie <a href="http://wybory2014.pkw.gov.pl/pl/obwody">Państwowej Komisji Wyborczej</a> i&nbsp;uzupełnij poniższe pola tekstowe:
+				Wyszukaj swój obwód wyborczy na stronie <a href="http://wybory2014.pkw.gov.pl/pl/obwody">Państwowej Komisji Wyborczej</a>, skopiuj i&nbsp;wklej nazwy stanowisk i&nbsp;instytucji, do których odbywa się głosowanie i&nbsp;podaj numery okręgów:
 			</p>
 			<ol>
 				<li>
-					<label for="" class="name">Kandydat na: </label><input type="text" name="" id="" class="name">
+					<label for="text1" class="name">Kandydat na: </label><input type="text" name="text1" id="text1" class="name">
 				</li>
 				<li>
-					<label for="" class="name">Kandydat do: </label><input type="text" name="" id="" class="name">
-					<label for="" class="number">Nr okręgu: </label><input type="text" name="" id="" class="number">
+					<label for="text2" class="name">Kandydat do: </label><input type="text" name="text2" id="text2" class="name">
+					<label for="number2" class="number">Nr okręgu: </label><input type="text" name="number2" id="number2" class="number">
 				</li>
 				<li>
-					<label for="" class="name">Kandydat do: </label><input type="text" name="" id="" class="name">
-					<label for="" class="number">Nr okręgu: </label><input type="text" name="" id="" class="number">
+					<label for="text3" class="name">Kandydat do: </label><input type="text" name="text3" id="text3" class="name">
+					<label for="number3" class="number">Nr okręgu: </label><input type="text" name="number3" id="number3" class="number">
 				</li>
 				<li>
-					<label for="" class="name">Kandydat do: </label><input type="text" name="" id="" class="name">
-					<label for="" class="number">Nr okręgu: </label><input type="text" name="" id="" class="number">
+					<label for="text4" class="name">Kandydat do: </label><input type="text" name="text4" id="text4" class="name">
+					<label for="number4" class="number">Nr okręgu: </label><input type="text" name="number4" id="number4" class="number">
 				</li>
 			</ol>
 			<input type="submit" value="Losuj" class="button">

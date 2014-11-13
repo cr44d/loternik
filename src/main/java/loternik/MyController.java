@@ -43,13 +43,13 @@ public class MyController {
         {
             
             model.put("prezydent", 
-                    GetRandomElement(this.helloWorldService.getRecordsByName("Prezydent m.st. Warszawy", "1")));
+                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName("Prezydent m.st. Warszawy", "1")));
             model.put("radaM",
-                    GetRandomElement(this.helloWorldService.getRecordsByName("Rada m.st. Warszawy", "5")));
+                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName("Rada m.st. Warszawy", "5")));
             model.put("radaD",
-                    GetRandomElement(this.helloWorldService.getRecordsByName("Rada Dzielnicy Żoliborz m. st. Warszawy", "4") ));
+                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName("Rada Dzielnicy Żoliborz m. st. Warszawy", "4") ));
             model.put("sejmik", 
-                    GetRandomElement(this.helloWorldService.getRecordsByName("Sejmik Województwa Mazowieckiego", "2") ));
+                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName("Sejmik Województwa Mazowieckiego", "2") ));
             
             return "results.jsp";
         }
@@ -59,4 +59,8 @@ public class MyController {
         return col.get( random.nextInt(col.size()));
     }
 
+    private Map<String, String> GetRandomElementAsMap(ArrayList<CSVRecord> col) {
+        Random random = new Random();
+        return col.get( random.nextInt(col.size())).toMap();
+    }
 }
