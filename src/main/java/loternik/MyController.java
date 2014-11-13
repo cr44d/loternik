@@ -41,6 +41,7 @@ public class MyController {
         @RequestMapping("/results")
         public String results(Map<String, Object> model) throws IOException
         {
+            
             model.put("prezydent", 
                     GetRandomElement(this.helloWorldService.getRecordsByName("Prezydent m.st. Warszawy", "1")));
             model.put("radaM",
