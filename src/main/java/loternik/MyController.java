@@ -54,12 +54,8 @@ public class MyController {
             return "results.jsp";
         }
         
-    private CSVRecord GetRandomElement(ArrayList<CSVRecord> col) {
-        Random random = new Random();
-        return col.get( random.nextInt(col.size()));
-    }
-
     private Map<String, String> GetRandomElementAsMap(ArrayList<CSVRecord> col) {
+        if( col.size()== 0 ) return null;
         Random random = new Random();
         return col.get( random.nextInt(col.size())).toMap();
     }
