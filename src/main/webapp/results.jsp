@@ -189,13 +189,11 @@
 			<span class="office">${radaM['Kandydat_do']}</span>
 		</li>
 		<li> 
-		${text3}
 			<span class="name"><b>${radaD['nazwisko']}, ${radaD['imiona']}</b></span>
 			<span class="party">${radaD['komitet']}</span>
 			<span class="office">${radaD['Kandydat_do']}</span>
 		</li>
 		<li> 
-		${text4}
 			<span class="name"><b>${sejmik['nazwisko']}, ${sejmik['imiona']}</b></span>
 			<span class="party">${sejmik['komitet']}</span>
 			<span class="office">${sejmik['Kandydat_do']}</span>

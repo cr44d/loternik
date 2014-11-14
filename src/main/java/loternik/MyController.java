@@ -60,9 +60,6 @@ public class MyController {
             model.put("sejmik", 
                     GetRandomElementAsMap(this.helloWorldService.getRecordsByName(text4, num4) ));
             
-            model.put("text3", text3);
-            model.put("text4", text4);
-            
             return "results.jsp";
         }
         
