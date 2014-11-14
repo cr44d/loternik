@@ -24,6 +24,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -39,17 +40,28 @@ public class MyController {
         }
         
         @RequestMapping("/results")
-        public String results(Map<String, Object> model) throws IOException
+        public String results(
+                @RequestParam(value = "text1") String text1,
+                @RequestParam(value = "text2") String text2,
+                @RequestParam(value = "number2") String num2,
+                @RequestParam(value = "text3") String text3,
+                @RequestParam(value = "number3") String num3,
+                @RequestParam(value = "text4") String text4,
+                @RequestParam(value = "number4") String num4,
+                Map<String, Object> model) throws IOException
         {
             
             model.put("prezydent", 
-                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName("Prezydent m.st. Warszawy", "1")));
+                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName(text1, "1")));
             model.put("radaM",
-                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName("Rada m.st. Warszawy", "5")));
+                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName(text2, num2)));
             model.put("radaD",
-                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName("Rada Dzielnicy Żoliborz m. st. Warszawy", "4") ));
+                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName(text3, num3) ));
             model.put("sejmik", 
-                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName("Sejmik Województwa Mazowieckiego", "2") ));
+                    GetRandomElementAsMap(this.helloWorldService.getRecordsByName(text4, num4) ));
+            
+            model.put("text3", text3);
+            model.put("text4", text4);
             
             return "results.jsp";
         }
