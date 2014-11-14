@@ -39,7 +39,7 @@ public class MyController {
             return "form.jsp";
         }
         
-        @RequestMapping("/results")
+        @RequestMapping(value="/results", consumes="multipart/form-data;charset=UTF-8")
         public String results(
                 @RequestParam(value = "text1") String text1,
                 @RequestParam(value = "text2") String text2,

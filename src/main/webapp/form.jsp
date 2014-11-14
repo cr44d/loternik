@@ -176,7 +176,7 @@
 	<div id="page">
 	<h1>Loternik Wyborczy</h1>
 	<h2>Wybory Samorządowe 2014</h2>
-	<form method="post" action="results">
+	<form method="post" action="results" accept-charset="UTF-8" enctype="multipart/form-data">
 		<fieldset>
 			<legend>Wybierz, kogo chcesz losować:</legend>
 			<p>
