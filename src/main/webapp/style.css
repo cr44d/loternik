@@ -1,0 +1,117 @@
+/* RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, a, abbr, acronym, address, big, cite, code, del, dfn, em, font,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, input, select, textarea,
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, hgroup, menu, 
+nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+a img {
+	margin: 0;
+	border: none;
+	padding: 0;
+}
+input {
+	border: 1px solid;
+}
+body {
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, form {
+	margin: 0.75em 0;
+}
+b, strong {
+	font-weight: bold; 
+}
+i, em, cite {
+	font-style: italic; 
+}
+small { 
+	font-size: 75%; 
+}
+a, a:visited, a:hover, a:active, a:focus, a.active:hover {
+	outline: none;
+	text-decoration: none;
+}
+
+/* STYLE */
+/* Typography */
+body {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+/* Colors */
+/* #29f #0b5 #f40 */
+body {color: #444;}
+.example, .office {color:#888;}
+h1 {background: #29f;}
+h2, h3, legend {color: #29f;}
+a {color:#0b5;}
+a:hover {color:#0a5;}
+input.button {background:#0b5;}
+input.button:hover {background:#0a5;}
+h1, input.button {color: #fff;}
+
+/* Layout */
+body {
+	padding: 0 0.75em;
+	text-align: center;
+}
+#page {
+	text-align:left;
+	margin: 0 auto;
+	max-width: 33em;
+}
+h1 {
+	position: fixed;
+	z-index:1000;
+	width:100%;
+	left:0;
+	top:0;
+	margin: 0;
+	padding: 0.75em 0;
+	box-shadow: 0 0.125em 0.125em rgba(0,0,0,0.25);
+}
+h1, input.button {
+	text-align:center;	
+}
+h2 {
+	padding-top: 3.5em;
+	padding-bottom: 0.5em;
+}
+ol {
+	padding-left:1.5em;
+}
+input {
+	background: transparent;
+	padding: 0 0.25em;
+	margin: 0.25em 0;
+}
+input.name {
+	max-width:15em;
+}
+input.number {
+	max-width:2em;
+}
+input.button {
+	cursor:pointer;
+	-webkit-appearance:none;
+	padding: 0.25em 1em;
+	width: 100%;
+}
+ol span {
+	display:block;
+}
+@media screen and (max-width: 49.5em) {
+	label {display:block;}
+	input.name {max-width:9.5em;}
+	
+}
